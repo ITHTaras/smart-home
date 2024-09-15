@@ -2,32 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f9f9f9;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
+.filter-purple:hover {
+  filter: invert(26%) sepia(72%) saturate(4409%) hue-rotate(252deg)
+    brightness(98%) contrast(94%);
+}
+
+.filter-purple-always {
+  filter: invert(26%) sepia(72%) saturate(4409%) hue-rotate(252deg)
+    brightness(98%) contrast(94%);
+}
+
+.filter-gray {
+  filter: invert(69%) sepia(2%) saturate(2294%) hue-rotate(204deg)
+    brightness(87%) contrast(96%);
 }
